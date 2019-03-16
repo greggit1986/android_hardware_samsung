@@ -2,12 +2,6 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_COPY_HEADERS_TO := libsecmm
-LOCAL_EXPORT_C_INCLUDE_DIRS := \
-	include/mfc_errno.h \
-	include/mfc_interface.h \
-	include/SsbSipMfcApi.h
-
 LOCAL_MODULE := libsecmfcapi
 
 LOCAL_MODULE_TAGS := optional
@@ -38,15 +32,14 @@ LOCAL_SHARED_LIBRARIES := liblog
 
 include $(BUILD_STATIC_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsecmfcapi_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
+include $(BUILD_HEADER_LIBRARY)
+
 # Shared MFC Dec API
 
 include $(CLEAR_VARS)
-
-LOCAL_COPY_HEADERS_TO := libsecmm
-LOCAL_EXPORT_C_INCLUDE_DIRS := \
-	include/mfc_errno.h \
-	include/mfc_interface.h \
-	include/SsbSipMfcApi.h
 
 LOCAL_MODULE := libsecmfcdecapi
 
@@ -77,15 +70,14 @@ LOCAL_SHARED_LIBRARIES := liblog
 
 include $(BUILD_SHARED_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsecmfcdecapi_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
+include $(BUILD_HEADER_LIBRARY)
+
 # Shared MFC Enc API
 
 include $(CLEAR_VARS)
-
-LOCAL_COPY_HEADERS_TO := libsecmm
-LOCAL_EXPORT_C_INCLUDE_DIRS := \
-	include/mfc_errno.h \
-	include/mfc_interface.h \
-	include/SsbSipMfcApi.h
 
 LOCAL_MODULE := libsecmfcencapi
 
@@ -116,3 +108,7 @@ LOCAL_SHARED_LIBRARIES := liblog
 
 include $(BUILD_SHARED_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsecmfcencapi_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
+include $(BUILD_HEADER_LIBRARY)

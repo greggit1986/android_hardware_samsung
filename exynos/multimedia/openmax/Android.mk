@@ -9,8 +9,6 @@ include $(CLEAR_VARS)
 
 SEC_OMX_TOP := $(LOCAL_PATH)
 
-SEC_COPY_HEADERS_TO := libsecmm
-
 SEC_OMX_INC := $(SEC_OMX_TOP)/include/
 SEC_OMX_COMPONENT := $(SEC_OMX_TOP)/component
 

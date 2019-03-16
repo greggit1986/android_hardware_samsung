@@ -1,12 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_COPY_HEADERS_TO := libsecmm
-LOCAL_COPY_HEADERS := \
-	include/srp_api.h \
-	include/srp_ioctl.h \
-	include/srp_error.h
-
 LOCAL_SRC_FILES := \
 	src/srp_api.c
 
@@ -24,3 +18,8 @@ LOCAL_STATIC_LIBRARIES :=
 LOCAL_SHARED_LIBRARIES :=
 
 include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsrpapi_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
+include $(BUILD_HEADER_LIBRARY)

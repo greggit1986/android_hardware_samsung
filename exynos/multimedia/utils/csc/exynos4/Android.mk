@@ -2,11 +2,6 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_COPY_HEADERS_TO := libsecmm
-LOCAL_COPY_HEADERS := \
-	color_space_convertor.h \
-	csc_fimc.h
-
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := \
@@ -21,6 +16,7 @@ LOCAL_SRC_FILES := \
 	csc_fimc.cpp
 
 LOCAL_C_INCLUDES := \
+	$(LOCAL_PATH)/include \
 	$(TOP)/$(TARGET_OMX_PATH)/include/khronos \
 	$(TOP)/$(TARGET_OMX_PATH)/include/sec \
 	$(TOP)/$(TARGET_HAL_PATH)/include \
@@ -43,3 +39,8 @@ LOCAL_STATIC_LIBRARIES :=
 LOCAL_SHARED_LIBRARIES := liblog libfimc libhwconverter
 
 include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libseccscapi_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
+include $(BUILD_HEADER_LIBRARY)

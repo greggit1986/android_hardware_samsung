@@ -28,10 +28,14 @@ LOCAL_STATIC_LIBRARIES := libSEC_OMX_Vdec libsecosal libsecbasecomponent \
 LOCAL_SHARED_LIBRARIES := libc libdl libcutils libutils libui liblog \
 	libSEC_OMX_Resourcemanager
 
+LOCAL_HEADER_LIBRARIES := libseccscapi_headers
+
 ifeq ($(TARGET_SOC),exynos4x12)
 LOCAL_SHARED_LIBRARIES += libsecmfcdecapi libsecmfcencapi
+LOCAL_HEADER_LIBRARIES += libsecmfcdecapi_headers libsecmfcencapi_headers
 else
 LOCAL_STATIC_LIBRARIES += libsecmfcapi
+LOCAL_HEADER_LIBRARIES += libsecmfcapi_headers
 endif
 
 ifeq ($(filter-out exynos4,$(TARGET_BOARD_PLATFORM)),)
@@ -47,8 +51,6 @@ LOCAL_C_INCLUDES := $(SEC_OMX_INC)/khronos \
 	$(SEC_OMX_TOP)/osal \
 	$(SEC_OMX_TOP)/core \
 	$(SEC_OMX_COMPONENT)/common \
-	$(SEC_OMX_COMPONENT)/video/dec \
-	$(TARGET_OUT_HEADERS)/$(SEC_COPY_HEADERS_TO) \
-	$(SEC_OMX_TOP)/../codecs/video/exynos4/mfc/include
+	$(SEC_OMX_COMPONENT)/video/dec
 
 include $(BUILD_SHARED_LIBRARY)

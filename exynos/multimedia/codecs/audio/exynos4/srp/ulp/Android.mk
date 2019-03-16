@@ -15,9 +15,9 @@ LOCAL_STATIC_LIBRARIES :=
 
 LOCAL_SHARED_LIBRARIES :=
 
-LOCAL_COPY_HEADERS := \
-	include/srp_api.h \
-	include/srp_api_ctrl.h \
-	include/srp_ioctl.h
-
 include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsrpapi_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
+include $(BUILD_HEADER_LIBRARY)

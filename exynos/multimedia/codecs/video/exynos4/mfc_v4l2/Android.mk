@@ -2,12 +2,6 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_COPY_HEADERS_TO := libsecmm
-LOCAL_COPY_HEADERS := \
-	include/mfc_errno.h \
-	include/mfc_interface.h \
-	include/SsbSipMfcApi.h
-
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := \
@@ -32,3 +26,8 @@ LOCAL_STATIC_LIBRARIES :=
 LOCAL_SHARED_LIBRARIES := liblog
 
 include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsecmfcapi_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
+include $(BUILD_HEADER_LIBRARY)
