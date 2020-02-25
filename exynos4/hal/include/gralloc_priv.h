@@ -28,6 +28,7 @@
 #ifndef GRALLOC_PRIV_H_
 #define GRALLOC_PRIV_H_
 
+#include <unistd.h>
 #include <stdint.h>
 #include <pthread.h>
 #include <errno.h>

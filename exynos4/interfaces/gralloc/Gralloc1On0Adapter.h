@@ -17,6 +17,8 @@
 #ifndef ANDROID_HARDWARE_GRALLOC_1_ON_0_ADAPTER_H
 #define ANDROID_HARDWARE_GRALLOC_1_ON_0_ADAPTER_H
 
+#include <unistd.h>
+
 #include <hardware/gralloc1.h>
 #include <log/log.h>
 

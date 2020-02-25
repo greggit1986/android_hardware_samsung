@@ -17,6 +17,7 @@ cc_library_shared {
     ],
     header_libs: [
         "libgrallocmapperincludes",
+        "libhardware_headers"
     ],
     whole_static_libs: ["libgrallocusage"],
 }
@@ -24,9 +25,14 @@ cc_library_shared {
 cc_library_static {
     name: "libgralloc1-adapter-exynos4",
     defaults: ["hidl_defaults"],
+    proprietary: true,
     srcs: ["gralloc1-adapter.cpp", "Gralloc1On0Adapter.cpp"],
     include_dirs: ["system/core/libsync/include"],
     cflags: ["-Wall", "-Wextra", "-Wno-error"],
+    header_libs: [
+        "libhardware_headers",
+        "liblog_headers"
+    ],
     export_include_dirs: ["."],
     whole_static_libs: ["libgrallocusage"],
 }

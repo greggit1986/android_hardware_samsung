@@ -26,7 +26,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_PRELINK_MODULE := false
 LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_SHARED_LIBRARIES := liblog libcutils libUMP libGLESv1_CM libsecion
+LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libUMP libGLESv1_CM libsecion
 
 # Include the UMP header files
 LOCAL_C_INCLUDES += \

@@ -27,6 +27,7 @@ LOCAL_SRC_FILES := libsecion.cpp
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libsecion
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
 endif
