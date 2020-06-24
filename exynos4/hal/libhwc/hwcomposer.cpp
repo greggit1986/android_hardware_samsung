@@ -351,14 +351,14 @@ bool is_overlay_supported_new(struct hwc_context_t *ctx, hwc_layer_1_t &layer, s
     switch (mode) {
     case gsc_map_t::FIMG:
         if (!supports_fimg(layer)) {
-            ALOGW("\tlayer %u: FIMG required but not supported", i);
+            ALOGV("\tlayer %u: FIMG required but not supported", i);
             return false;
         }
         break;
 
     case gsc_map_t::FIMC:
         if (!supports_fimc(layer)) {
-            ALOGW("\tlayer %u: FIMG required but not supported", i);
+            ALOGV("\tlayer %u: FIMG required but not supported", i);
             return false;
         }
         break;
@@ -366,21 +366,21 @@ bool is_overlay_supported_new(struct hwc_context_t *ctx, hwc_layer_1_t &layer, s
     default:
         if (!format_is_supported(handle->format) || is_transformed(layer) || is_scaled(layer) || !is_contiguous(layer)
 				|| !is_x_aligned(layer)) {
-            ALOGW("\tlayer %u: pixel format %u not supported", i, handle->format);
+            ALOGV("\tlayer %u: pixel format %u not supported: format=%d, is_transformed=%d, is_scaled=%d, is_contiguous=%d, is_x_aligned=%d", i, handle->format, format_is_supported(handle->format), is_transformed(layer), is_scaled(layer), is_contiguous(layer), is_x_aligned(layer));
             return false;
         }
     }
 
     if (visible_width(ctx, layer) < BURSTLEN_BYTES) {
-        ALOGW("\tlayer %u: visible area is too narrow", i);
+        ALOGV("\tlayer %u: visible area is too narrow", i);
         return false;
     }
     if (!blending_is_supported(layer.blending)) {
-        ALOGW("\tlayer %u: blending %d not supported", i, layer.blending);
+        ALOGV("\tlayer %u: blending %d not supported", i, layer.blending);
         return false;
     }
     if (UNLIKELY(is_offscreen(ctx, layer))) {
-        ALOGW("\tlayer %u: off-screen", i);
+        ALOGV("\tlayer %u: off-screen", i);
         return false;
     }
 
