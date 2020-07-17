@@ -137,6 +137,8 @@ struct hwc_context_t {
     bool                      force_fb;
     bool                      multi_fimg; // enable multiple fimg layers
     int                       bypass_count;
+    bool                      use_new_composition_decision;
+    bool                      (*is_overlay_supported)(struct hwc_context_t *ctx, hwc_layer_1_t &layer, size_t i);
 
     struct hwc_win_info_t     win[NUM_HW_WINDOWS];
 
