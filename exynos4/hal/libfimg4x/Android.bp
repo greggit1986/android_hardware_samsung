@@ -1,0 +1,17 @@
+cc_library_shared {
+    srcs: [
+        "FimgApi.cpp",
+        "FimgExynos4.cpp",
+    ],
+
+    local_include_dirs: ["include"],
+
+    shared_libs: [
+        "liblog",
+        "libutils",
+        "libbinder",
+    ],
+
+    name: "libfimg4x",
+
+}

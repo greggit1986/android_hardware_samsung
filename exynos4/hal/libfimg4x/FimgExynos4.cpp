@@ -339,4 +339,13 @@ extern "C" void destroyFimgApi(FimgApi * ptrFimgApi)
     // Dont' call DestroyInstance.
 }
 
+/*
+extern "C" bool compromiseFimgApi(struct compromise_param * param)
+{
+    if ((param->clipW * param->clipH) < comp_value[param->src_fmt][param->dst_fmt][param->isScaling][param->isFilter][param->isSrcOver])
+        return false;
+    return true;
+}
+*/
+
 }; // namespace android

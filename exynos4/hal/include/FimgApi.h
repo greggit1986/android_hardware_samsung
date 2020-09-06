@@ -102,6 +102,16 @@ struct blit_op_table {
     const char *str;
 };
 
+struct compromise_param {
+    int clipW;
+    int clipH;
+    int src_fmt;
+    int dst_fmt;
+    int isScaling;
+    int isFilter;
+    int isSrcOver;
+};
+
 extern struct blit_op_table optbl[];
 
 class FimgApi
@@ -150,6 +160,12 @@ void destroyFimgApi(FimgApi *ptrFimgApi);
 extern "C"
 #endif
 int stretchFimgApi(struct fimg2d_blit *cmd);
+
+#ifdef __cplusplus
+extern "C"
+#endif
+bool compromiseFimgApi(struct compromise_param *param);
+
 #ifdef __cplusplus
 extern "C"
 #endif
