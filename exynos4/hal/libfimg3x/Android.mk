@@ -14,6 +14,7 @@ LOCAL_SRC_FILES:= \
 LOCAL_SHARED_LIBRARIES:= liblog libutils libbinder
 
 LOCAL_MODULE:= libfimg
+LOCAL_VENDOR_MODULE := true
 
 LOCAL_PRELINK_MODULE := false
 

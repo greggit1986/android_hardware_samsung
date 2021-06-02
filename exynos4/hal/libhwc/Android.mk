@@ -40,6 +40,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../include \
                     $(TOP)/system/core/libsync/include
 
 LOCAL_MODULE := hwcomposer.$(TARGET_BOARD_PLATFORM)
+LOCAL_VENDOR_MODULE := true
 LOCAL_CFLAGS += -DLOG_TAG=\"hwcomposer\"
 LOCAL_CFLAGS += -Wno-error
 LOCAL_MODULE_TAGS := optional

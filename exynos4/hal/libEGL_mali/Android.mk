@@ -44,6 +44,7 @@ LOCAL_SHARED_LIBRARIES := libMali liblog libcutils
 LOCAL_MODULE := libEGL_mali
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_RELATIVE_PATH := egl
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 endif
