@@ -46,7 +46,7 @@
 #define MAX_TIMESTAMP        17
 #define MAX_FLAGS            17
 
-#define SEC_OMX_INSTALL_PATH "/system/lib/omx/"
+#define SEC_OMX_INSTALL_PATH "/vendor/lib/omx/"
 
 typedef enum _SEC_CODEC_TYPE
 {
