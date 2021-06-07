@@ -24,7 +24,7 @@
 #define LOG_TAG "libfimc"
 #include <cutils/log.h>
 #include <errno.h>
-
+#include <stdio.h>
 #include "SecFimc.h"
 
 #undef BOARD_SUPPORT_SYSMMU

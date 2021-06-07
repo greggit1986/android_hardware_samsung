@@ -2,6 +2,7 @@ ifneq ($(TARGET_PROVIDES_CAMERA_HAL),true)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
+LOCAL_VENDOR_MODULE := true
 
 # HAL module implemenation stored in
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.product.board>.so
@@ -13,7 +14,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include \
 LOCAL_SRC_FILES:= \
 	SecCamera.cpp SecCameraHWInterface.cpp
 
-LOCAL_SHARED_LIBRARIES:= libutils libcutils libbinder liblog libcamera_client libhardware
+LOCAL_SHARED_LIBRARIES:= libutils libcutils libbinder liblog libhardware
 
 ifeq ($(TARGET_SOC), exynos4210)
 LOCAL_SHARED_LIBRARIES += libs5pjpeg

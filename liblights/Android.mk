@@ -24,6 +24,8 @@ LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 LOCAL_SHARED_LIBRARIES := liblog
 
 LOCAL_MODULE := liblights_helper
+LOCAL_VENDOR_MODULE := true
+
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_STATIC_LIBRARY)

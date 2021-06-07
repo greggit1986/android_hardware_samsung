@@ -18,7 +18,7 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_PRELINK_MODULE := false
-LOCAL_SHARED_LIBRARIES := liblog libutils libcutils
+LOCAL_SHARED_LIBRARIES := liblog libutils libcutils libhardware
 ifeq ($(BOARD_SUPPORT_SYSMMU),true)
 LOCAL_SHARED_LIBRARIES+= libMali
 endif

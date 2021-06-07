@@ -23,7 +23,7 @@ LOCAL_SRC_FILES := consumerir.c
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware
 
 ifeq ($(IR_HAL_SUFFIX),)
 IR_HAL_SUFFIX := $(TARGET_BOARD_PLATFORM)

@@ -8,7 +8,7 @@ LOCAL_SRC_FILES := \
 	SEC_OMX_Baseport.c
 
 LOCAL_MODULE := libsecbasecomponent
-
+LOCAL_VENDOR_MODULE := true
 LOCAL_CFLAGS := -Wno-error
 
 LOCAL_STATIC_LIBRARIES := libsecosal

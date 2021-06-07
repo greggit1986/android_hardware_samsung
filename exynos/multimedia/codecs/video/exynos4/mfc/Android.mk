@@ -3,6 +3,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libsecmfcapi
+LOCAL_VENDOR_MODULE := true
 
 LOCAL_MODULE_TAGS := optional
 
@@ -28,7 +29,7 @@ endif
 LOCAL_ARM_MODE := arm
 
 LOCAL_STATIC_LIBRARIES :=
-LOCAL_SHARED_LIBRARIES := liblog
+LOCAL_SHARED_LIBRARIES := liblog libutils
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -42,6 +43,7 @@ include $(BUILD_HEADER_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libsecmfcdecapi
+LOCAL_VENDOR_MODULE := true
 
 LOCAL_MODULE_TAGS := optional
 
@@ -66,7 +68,7 @@ endif
 LOCAL_ARM_MODE := arm
 
 LOCAL_STATIC_LIBRARIES :=
-LOCAL_SHARED_LIBRARIES := liblog
+LOCAL_SHARED_LIBRARIES := liblog libutils
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -80,6 +82,7 @@ include $(BUILD_HEADER_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libsecmfcencapi
+LOCAL_VENDOR_MODULE := true
 
 LOCAL_MODULE_TAGS := optional
 
@@ -104,7 +107,7 @@ endif
 LOCAL_ARM_MODE := arm
 
 LOCAL_STATIC_LIBRARIES :=
-LOCAL_SHARED_LIBRARIES := liblog
+LOCAL_SHARED_LIBRARIES := liblog libutils
 
 include $(BUILD_SHARED_LIBRARY)
 

@@ -5,6 +5,7 @@ LOCAL_SRC_FILES := \
 	SEC_OMX_Venc.c
 
 LOCAL_MODULE := libSEC_OMX_Venc
+LOCAL_VENDOR_MODULE := true
 LOCAL_ARM_MODE := arm
 LOCAL_MODULE_TAGS := optional
 

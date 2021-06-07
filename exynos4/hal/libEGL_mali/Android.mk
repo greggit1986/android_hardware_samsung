@@ -26,6 +26,7 @@ LOCAL_C_INCLUDES := \
         frameworks/native/libs/nativewindow/include \
         frameworks/native/libs/nativebase/include \
         frameworks/native/libs/arect/include \
+       	frameworks/native/opengl/include	\
         system/core/include
 
 LOCAL_CFLAGS := -DLOG_TAG=\"EGL_mali\"
