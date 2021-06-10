@@ -43,5 +43,6 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libseccscapi_headers
+LOCAL_VENDOR_MODULE := true
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 include $(BUILD_HEADER_LIBRARY)

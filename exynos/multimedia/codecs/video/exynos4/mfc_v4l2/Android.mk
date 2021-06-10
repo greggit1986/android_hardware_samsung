@@ -13,7 +13,7 @@ LOCAL_C_INCLUDES := \
 	device/samsung/$(TARGET_BOARD_PLATFORM)/include
 
 LOCAL_MODULE := libsecmfcapi
-
+LOCAL_VENDOR_MODULE := true
 LOCAL_PRELINK_MODULE := false
 
 ifeq ($(BOARD_USES_MFC_FPS),true)
@@ -29,5 +29,6 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libsecmfcapi_headers
+LOCAL_VENDOR_MODULE := true
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 include $(BUILD_HEADER_LIBRARY)

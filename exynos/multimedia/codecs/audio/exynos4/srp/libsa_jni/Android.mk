@@ -6,7 +6,7 @@ LOCAL_PRELINK_MODULE := false
 
 LOCAL_MODULE := libsa_jni
 LOCAL_SRC_FILES := SACtrl.c
-
+LOCAL_VENDOR_MODULE := true
 LOCAL_SHARED_LIBRARIES :=  libcutils
 LOCAL_STATIC_LIBRARIES := libsrpapi
 

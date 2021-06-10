@@ -6,7 +6,7 @@ LOCAL_SRC_FILES := \
 	src/srp_api_ctrl.c
 
 LOCAL_MODULE := libsrpapi
-
+LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_ARM_MODE := arm
@@ -19,5 +19,6 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libsrpapi_headers
+LOCAL_VENDOR_MODULE := true
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 include $(BUILD_HEADER_LIBRARY)

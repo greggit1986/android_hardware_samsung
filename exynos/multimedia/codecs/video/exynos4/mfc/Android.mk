@@ -74,6 +74,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libsecmfcdecapi_headers
+LOCAL_VENDOR_MODULE := true
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 include $(BUILD_HEADER_LIBRARY)
 
@@ -113,5 +114,6 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libsecmfcencapi_headers
+LOCAL_VENDOR_MODULE := true
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 include $(BUILD_HEADER_LIBRARY)
