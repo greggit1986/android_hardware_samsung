@@ -6,6 +6,9 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= \
     secril-client.cpp
 
+LOCAL_C_INCLUDES += \
+	hardware/ril/include
+
 LOCAL_SHARED_LIBRARIES := \
     libutils \
     libbinder \
@@ -23,6 +26,7 @@ LOCAL_CFLAGS += -DSAMSUNG_NEXT_GEN_MODEM
 endif
 
 LOCAL_MODULE:= libsecril-client
+LOCAL_VENDOR_MODULE := true
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
