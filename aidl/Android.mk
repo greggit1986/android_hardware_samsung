@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-include $(call all-subdir-makefiles)
+#include $(call all-subdir-makefiles)
