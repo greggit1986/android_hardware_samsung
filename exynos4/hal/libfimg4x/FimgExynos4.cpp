@@ -20,6 +20,7 @@
 #pragma clang diagnostic ignored "-Wunused-parameter"
 #pragma clang diagnostic ignored "-Wmismatched-tags"
 #pragma clang diagnostic ignored "-Wunused-variable"
+#pragma clang diagnostic ignored "-Wunreachable-code-loop-increment"
 
 #define LOG_NDEBUG 0
 #define LOG_TAG "FimgExynos4"
