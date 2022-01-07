@@ -873,7 +873,7 @@ Return<void> RadioImpl::supplyIccPinForApp(int32_t serial, const hidl_string& pi
 #if VDBG
     RLOGD("supplyIccPinForApp: serial %d", serial);
 #endif
-#ifdef MODEM_TYPE_XMM6260
+#ifdef MODEM_SIM_PIN_FIX
     dispatchStrings(serial, mSlotId, RIL_REQUEST_ENTER_SIM_PIN, false,
             2, pin.c_str(), aid.c_str());
 #else
