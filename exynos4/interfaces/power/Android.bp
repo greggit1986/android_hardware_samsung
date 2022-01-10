@@ -23,6 +23,7 @@ cc_binary {
         "libhardware",
         "libhidlbase",
         "android.hardware.power@1.0",
+        "vendor.lineage.power@1.0",
     ],
 }
 
@@ -52,6 +53,7 @@ cc_binary {
         "libhardware",
         "libhidlbase",
         "android.hardware.power@1.0",
+        "vendor.lineage.power@1.0",
     ],
 }
 
