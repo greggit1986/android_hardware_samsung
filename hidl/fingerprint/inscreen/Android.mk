@@ -29,8 +29,7 @@ LOCAL_SHARED_LIBRARIES := \
     libhardware \
     libhidlbase \
     liblog \
-    libutils \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0
+    libutils
 
 LOCAL_MODULE := vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.samsung
 LOCAL_INIT_RC := vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.samsung.rc
