@@ -2,6 +2,8 @@
 
 ifeq ($(BOARD_PROVIDES_LIBRIL),true)
 
+ifeq ($(filter mdm9x35,$(BOARD_MODEM_TYPE)),)
+
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -75,3 +77,5 @@ LOCAL_SANITIZE := integer
 include $(BUILD_SHARED_LIBRARY)
 
 endif # BOARD_PROVIDES_LIBRIL
+
+endif
