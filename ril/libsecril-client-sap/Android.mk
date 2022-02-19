@@ -7,6 +7,9 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES:= \
     secril-client-sap.cpp
 
+LOCAL_C_INCLUDES += \
+	hardware/ril/include
+
 LOCAL_SHARED_LIBRARIES := \
     libutils \
     libbinder \
@@ -17,6 +20,7 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_CFLAGS := 
 
 LOCAL_MODULE:= libsecril-client-sap
+LOCAL_VENDOR_MODULE := true
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
