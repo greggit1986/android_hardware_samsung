@@ -14,33 +14,4 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_KEYMASTER_VARIANT),samsung)
-
-LOCAL_PATH := $(call my-dir)
-
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := \
-    service.cpp
-
-LOCAL_SHARED_LIBRARIES := \
-    android.hardware.keymaster@4.0 \
-    libbase \
-    libcutils \
-    libhardware \
-    libhidlbase \
-    libkeymaster4 \
-    liblog \
-    libskeymaster4device \
-    libutils
-
-LOCAL_MODULE := android.hardware.keymaster@4.0-service.samsung
-LOCAL_INIT_RC := android.hardware.keymaster@4.0-service.samsung.rc
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := samsung
-LOCAL_VENDOR_MODULE := true
-
-include $(BUILD_EXECUTABLE)
-
-endif # TARGET_KEYMASTER_VARIANT
+include $(call all-subdir-makefiles)
