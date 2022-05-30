@@ -25,6 +25,7 @@
 #include <utils/Log.h>
 
 #include "FimgC210.h"
+#pragma clang diagnostic ignored "-Wunreachable-code-loop-increment"
 
 namespace android
 {
