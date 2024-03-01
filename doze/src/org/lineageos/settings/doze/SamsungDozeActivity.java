@@ -17,7 +17,10 @@ package org.lineageos.settings.doze;
 
 import android.os.Bundle;
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.collapsingtoolbar.R;
+//jjedit import com.android.settingslib.collapsingtoolbar.R;
+//jjeditstart
+import com.android.settingslib.widget.R;
+//jjeditend
 
 public class SamsungDozeActivity extends CollapsingToolbarBaseActivity {
 
