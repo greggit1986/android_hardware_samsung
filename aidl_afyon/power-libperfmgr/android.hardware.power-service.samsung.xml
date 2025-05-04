@@ -1,0 +1,10 @@
+<manifest version="1.0" type="device" target-level="4">
+    <hal format="aidl" override="true">
+        <name>android.hardware.power</name>
+        <fqname>IPower/default</fqname>
+    </hal>
+    <hal format="aidl" override="true">
+        <name>vendor.lineage.power</name>
+        <fqname>IPower/default</fqname>
+    </hal>
+</manifest>
